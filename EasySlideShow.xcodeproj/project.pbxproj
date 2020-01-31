@@ -10,6 +10,10 @@
 		7B86195023E41CA800BFD9EE /* EasySlideShow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B86194623E41CA800BFD9EE /* EasySlideShow.framework */; };
 		7B86195523E41CA800BFD9EE /* EasySlideShowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B86195423E41CA800BFD9EE /* EasySlideShowTests.swift */; };
 		7B86195723E41CA800BFD9EE /* EasySlideShow.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B86194923E41CA800BFD9EE /* EasySlideShow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B86196623E41CBC00BFD9EE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B86196123E41CBC00BFD9EE /* Constants.swift */; };
+		7B86196723E41CBC00BFD9EE /* SlideShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B86196223E41CBC00BFD9EE /* SlideShow.swift */; };
+		7B86196823E41CBC00BFD9EE /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B86196323E41CBC00BFD9EE /* ImageCollectionViewCell.swift */; };
+		7B86196923E41CBC00BFD9EE /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B86196423E41CBC00BFD9EE /* UIImageViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		7B86194F23E41CA800BFD9EE /* EasySlideShowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasySlideShowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B86195423E41CA800BFD9EE /* EasySlideShowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasySlideShowTests.swift; sourceTree = "<group>"; };
 		7B86195623E41CA800BFD9EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B86196123E41CBC00BFD9EE /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7B86196223E41CBC00BFD9EE /* SlideShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideShow.swift; sourceTree = "<group>"; };
+		7B86196323E41CBC00BFD9EE /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		7B86196423E41CBC00BFD9EE /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,7 @@
 		7B86194823E41CA800BFD9EE /* EasySlideShow */ = {
 			isa = PBXGroup;
 			children = (
+				7B86196A23E41CCB00BFD9EE /* App */,
 				7B86194923E41CA800BFD9EE /* EasySlideShow.h */,
 				7B86194A23E41CA800BFD9EE /* Info.plist */,
 			);
@@ -84,6 +93,17 @@
 				7B86195623E41CA800BFD9EE /* Info.plist */,
 			);
 			path = EasySlideShowTests;
+			sourceTree = "<group>";
+		};
+		7B86196A23E41CCB00BFD9EE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7B86196123E41CBC00BFD9EE /* Constants.swift */,
+				7B86196223E41CBC00BFD9EE /* SlideShow.swift */,
+				7B86196323E41CBC00BFD9EE /* ImageCollectionViewCell.swift */,
+				7B86196423E41CBC00BFD9EE /* UIImageViewExtensions.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +168,7 @@
 				TargetAttributes = {
 					7B86194523E41CA800BFD9EE = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 					7B86194E23E41CA800BFD9EE = {
 						CreatedOnToolsVersion = 11.3;
@@ -195,6 +216,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B86196623E41CBC00BFD9EE /* Constants.swift in Sources */,
+				7B86196823E41CBC00BFD9EE /* ImageCollectionViewCell.swift in Sources */,
+				7B86196923E41CBC00BFD9EE /* UIImageViewExtensions.swift in Sources */,
+				7B86196723E41CBC00BFD9EE /* SlideShow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +365,7 @@
 		7B86195B23E41CA800BFD9EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6ZL797GF7H;
@@ -356,6 +382,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.daniel.hjartstrom.EasySlideShow;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +391,7 @@
 		7B86195C23E41CA800BFD9EE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6ZL797GF7H;
@@ -388,6 +416,7 @@
 		7B86195E23E41CA800BFD9EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6ZL797GF7H;
 				INFOPLIST_FILE = EasySlideShowTests/Info.plist;
@@ -406,6 +435,7 @@
 		7B86195F23E41CA800BFD9EE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6ZL797GF7H;
 				INFOPLIST_FILE = EasySlideShowTests/Info.plist;
